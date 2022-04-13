@@ -1,3 +1,9 @@
+mod config_init;
+
+use dotenv::dotenv;
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+    dotenv().ok();
+    config_init::init_from_env();
 }
