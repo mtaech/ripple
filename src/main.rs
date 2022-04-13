@@ -1,7 +1,6 @@
-mod config_init;
-
 use dotenv::dotenv;
-use std::env;
+
+mod config_init;
 
 fn main() {
     dotenv().ok();

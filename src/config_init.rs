@@ -1,4 +1,3 @@
-use std::env::VarError;
 use std::path::{Path, PathBuf};
 use std::{env, fs};
 
@@ -16,7 +15,7 @@ fn get_current_dir() -> String {
 }
 
 fn create_config_dir(home_dir: String) {
-    let config_dir = &String::from(".wave");
+    let config_dir = &String::from(".ripple");
     let config_path = Path::new(&home_dir).join(Path::new(config_dir));
     match config_path.exists() {
         true => {}
