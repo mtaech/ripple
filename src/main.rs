@@ -1,8 +1,8 @@
 use dotenv::dotenv;
 
-mod config_init;
+mod config;
 
 fn main() {
     dotenv().ok();
-    config_init::init_from_env();
+    config::init_from_env();
 }
