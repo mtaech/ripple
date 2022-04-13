@@ -1,0 +1,38 @@
+{
+  "name": "front_src",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hocuspocus/provider": "^1.0.0-alpha.36",
+    "@tiptap/extension-character-count": "^2.0.0-beta.25",
+    "@tiptap/extension-collaboration": "^2.0.0-beta.33",
+    "@tiptap/extension-collaboration-cursor": "^2.0.0-beta.34",
+    "@tiptap/extension-highlight": "^2.0.0-beta.33",
+    "@tiptap/extension-task-item": "^2.0.0-beta.31",
+    "@tiptap/extension-task-list": "^2.0.0-beta.26",
+    "@tiptap/starter-kit": "^2.0.0-beta.183",
+    "@tiptap/vue-3": "^2.0.0-beta.90",
+    "element-plus": "^2.1.8",
+    "pinia": "^2.0.13",
+    "postcss-loader": "^4.3.0",
+    "raw-loader": "^4.0.2",
+    "remixicon": "^2.5.0",
+    "sass": "^1.49.11",
+    "unplugin-auto-import": "^0.6.9",
+    "unplugin-vue-components": "^0.18.5",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.14",
+    "vue3-i18n": "^1.1.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.0",
+    "vue-tsc": "^0.29.8"
+  }
+}
