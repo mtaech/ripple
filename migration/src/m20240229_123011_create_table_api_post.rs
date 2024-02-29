@@ -18,19 +18,35 @@ impl MigrationTrait for Migration {
                             .auto_increment()
                             .primary_key(),
                     )
-                    .col(ColumnDef::new(ApiLog::Path).string().not_null())
-                    .col(ColumnDef::new(ApiLog::ReqTime).string().not_null())
-                    .col(ColumnDef::new(ApiLog::IpAddr).string().not_null())
-                    .col(ColumnDef::new(ApiLog::UserAgent).string().not_null())
+                    .col(
+                        ColumnDef::new(ApiLog::Path)
+                            .string()
+                            .not_null()
+                            .comment("请求路径"),
+                    )
+                    .col(
+                        ColumnDef::new(ApiLog::ReqTime)
+                            .string()
+                            .not_null()
+                            .comment("请求时间"),
+                    )
+                    .col(
+                        ColumnDef::new(ApiLog::IpAddr)
+                            .string()
+                            .not_null()
+                            .comment("ip地址"),
+                    )
+                    .col(
+                        ColumnDef::new(ApiLog::UserAgent)
+                            .string()
+                            .comment("浏览器UA"),
+                    )
                     .to_owned(),
             )
             .await
     }
 
     async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
-        // Replace the sample below with your own migration scripts
-        todo!();
-
         manager
             .drop_table(Table::drop().table(ApiLog::Table).to_owned())
             .await

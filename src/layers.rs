@@ -1,7 +1,4 @@
-use axum::extract::Request;
 use axum::http::{header, Method};
-use axum::middleware::Next;
-use axum::response::IntoResponse;
 use tower_http::cors::{AllowOrigin, CorsLayer};
 
 ///解除 CORS 限制

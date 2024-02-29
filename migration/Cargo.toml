@@ -20,5 +20,6 @@ features = [
     "sqlx-mysql",
     "sqlx-postgres",
     "with-json",
-    "with-rust_decimal"
+    "with-rust_decimal",
+    "with-chrono"
 ]
